@@ -10,7 +10,7 @@ var operator = 'your_operator';
 var password = 'your_password';
 
 // 使用 moment.js 格式化 GMT date
-var gmdate = moment().format("ddd, DD MMM YYYY HH:MM:ss [GMT]");
+var gmdate = moment.utc().format("ddd, DD MMM YYYY hh:mm:ss [GMT]");
 
 // MD5 加密，加密 password 和 Content-md5(非必选)
 function md5(str) {
@@ -46,7 +46,7 @@ var params = [{
 var form_data = {
     service: service,
     notify_url: 'https://uptool.tingfun.net/echo.php',
-    app_name: 'compress',
+    app_name: 'spiderman',
     tasks: base64(params)
 };
 
